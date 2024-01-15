@@ -86,6 +86,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // Form1
             // 
@@ -99,6 +100,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            ImeMode = ImeMode.AlphaFull;
             Name = "Form1";
             Padding = new Padding(16);
             Text = "Generator Totem";

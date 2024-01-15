@@ -30,13 +30,6 @@ namespace Generator
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
             OpenFileDialog FileData = new OpenFileDialog();
 
             FileData.Filter = "Export PNG (*.png)|*.png";
@@ -55,6 +48,48 @@ namespace Generator
                 }
                 catch { }
             }
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1 != null)
+            {
+                SaveFileDialog FileData = new SaveFileDialog();
+                FileData.Filter = "PNG (*.png)|*.png";
+                FileData.FileName = "totem_of_undying";
+                if (FileData.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                      
+                        _bitmapTotem.Save(FileData.FileName, ImageFormat.Png);
+                    }
+                    catch { }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            OpenFileDialog FileData = new OpenFileDialog();
+
+            FileData.Filter = "Import PNG (*.png)|*.png";
+            if (FileData.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Bitmap image = new Bitmap(FileData.FileName);
+                    Bitmap totem = CreateBitmapTotem(image);
+
+                    _bitmapTotem = totem;
+
+                    pictureBox1.Image = ScaleBimaps(image, 4);
+                    pictureBox2.Image = ScaleBimaps(totem, 6);
+
+                }
+                catch { }
+            }
 
         }
 
@@ -64,11 +99,12 @@ namespace Generator
             {
                 SaveFileDialog FileData = new SaveFileDialog();
                 FileData.Filter = "PNG (*.png)|*.png";
+                FileData.FileName = "totem_of_undying";
                 if (FileData.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-
+                     
                         _bitmapTotem.Save(FileData.FileName, ImageFormat.Png);
                     }
                     catch { }
@@ -167,5 +203,6 @@ namespace Generator
             return reasult;
         }
 
+    
     }
 }

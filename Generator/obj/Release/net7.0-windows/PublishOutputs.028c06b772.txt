@@ -1,0 +1,5 @@
+C:\Users\MrPokkPC\Desktop\GeneratorTotem\Generator\Generator\bin\Release\net7.0-windows\publish\Generator.exe
+C:\Users\MrPokkPC\Desktop\GeneratorTotem\Generator\Generator\bin\Release\net7.0-windows\publish\Generator.dll
+C:\Users\MrPokkPC\Desktop\GeneratorTotem\Generator\Generator\bin\Release\net7.0-windows\publish\Generator.deps.json
+C:\Users\MrPokkPC\Desktop\GeneratorTotem\Generator\Generator\bin\Release\net7.0-windows\publish\Generator.runtimeconfig.json
+C:\Users\MrPokkPC\Desktop\GeneratorTotem\Generator\Generator\bin\Release\net7.0-windows\publish\Generator.pdb
